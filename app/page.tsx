@@ -265,7 +265,7 @@ export default function Home() {
               </TabsContent>
 
               <TabsContent value="tiendas-online">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                   <PricingCard
                     title="Básico"
                     price="$90.000"
