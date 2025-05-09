@@ -269,22 +269,39 @@ export default function Home() {
                   <PricingCard
                     title="Básico"
                     price="$90.000"
-                    description="Hasta 10 productos, diseño responsive, pasarelas de pago locales."
+                    description="Hasta 20 productos, diseño responsive, pasarelas de pago locales."
                     features={[
-                      "Hasta 10 productos",
+                      "Hasta 20 productos",
                       "Diseño responsive",
                       "Pasarelas de pago locales",
                       "Panel de administración",
                       "Gestión de inventario básica",
                       "SEO básico",
+                      "Hosting estatico",
+                      "Ideal para emprendimientos pequeños",
+                    ]}
+                  />
+                   <PricingCard
+                    title="Intermedio"
+                    price="$135.000"
+                    description="Hasta 50 productos, diseño personalizado, SEO mejorado, ideal para tiendas medianas."
+                    features={[
+                      "Hasta 50 productos",
+                      "Diseño responsive",
+                      "Pasarelas de pago locales",
+                      "Panel de administración",
+                      "Gestión de inventario intermedia",
+                      "SEO mejorado",
+                      "Hosting optimizado o VPS parcial",
+                      "Ideal para tiendas medianas",
                     ]}
                   />
                   <PricingCard
                     title="Avanzado"
-                    price="$150.000"
-                    description="Hasta 30 productos, diseño personalizado, reviews, velocidad, integración redes sociales, SEO avanzado."
+                    price="$180.000"
+                    description="Hasta 150 productos, diseño a medida, integracion completa, soporte tecnico."
                     features={[
-                      "Hasta 30 productos",
+                      "Hasta 150 productos",
                       "Diseño totalmente personalizado",
                       "Sistema de reviews",
                       "Optimización de velocidad",
@@ -292,6 +309,8 @@ export default function Home() {
                       "SEO avanzado",
                       "Múltiples pasarelas de pago",
                       "Soporte técnico (3 meses)",
+                      "VPS dedicado",
+                      "Ideal para negocios que quieren escalar",
                     ]}
                   />
                 </div>
