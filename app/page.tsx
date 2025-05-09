@@ -279,6 +279,8 @@ export default function Home() {
                       "SEO básico",
                       "Hosting estatico",
                       "Ideal para emprendimientos pequeños",
+
+                      
                     ]}
                   />
                    <PricingCard
@@ -294,6 +296,8 @@ export default function Home() {
                       "SEO mejorado",
                       "Hosting optimizado o VPS parcial",
                       "Ideal para tiendas medianas",
+
+
                     ]}
                   />
                   <PricingCard
