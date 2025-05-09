@@ -55,13 +55,13 @@ export default function Home() {
     }
   }
 
-  // Función para actualizar el estado del formulario
+  // FunciÃ³n para actualizar el estado del formulario
   const handleInputChange = (e) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  // Efecto para detectar la sección activa durante el scroll
+  // Efecto para detectar la secciÃ³n activa durante el scroll
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 100
@@ -88,14 +88,14 @@ export default function Home() {
     ]
 
     window.addEventListener("scroll", handleScroll)
-    handleScroll() // Verificar la sección activa al cargar
+    handleScroll() // Verificar la secciÃ³n activa al cargar
 
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
 
-  // Función para cerrar el menú móvil al hacer clic en un enlace
+  // FunciÃ³n para cerrar el menÃº mÃ³vil al hacer clic en un enlace
   const handleNavLinkClick = () => {
     setIsMenuOpen(false)
   }
@@ -109,7 +109,7 @@ export default function Home() {
             <Image src="/images/logo.png" alt="UIZA Logo" width={1200} height={48} className="h-12 w-auto" />
           </Link>
 
-          {/* Navegación Desktop */}
+          {/* NavegaciÃ³n Desktop */}
           <nav className="hidden md:flex items-center space-x-8">
             <NavLink href="#inicio" isActive={activeSection === "inicio"}>
               Inicio
@@ -128,7 +128,7 @@ export default function Home() {
             </NavLink>
           </nav>
 
-          {/* Botón de menú móvil */}
+          {/* BotÃ³n de menÃº mÃ³vil */}
           <button
             className="md:hidden text-gray-700 hover:text-violet-600 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -137,7 +137,7 @@ export default function Home() {
           </button>
         </div>
 
-        {/* Menú móvil */}
+        {/* MenÃº mÃ³vil */}
         {isMenuOpen && (
           <div className="md:hidden bg-white border-b border-gray-100">
             <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
@@ -173,10 +173,10 @@ export default function Home() {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Creamos sitios web modernos, rápidos y accesibles para todos
+                Creamos sitios web modernos, rÃ¡pidos y accesibles para todos
               </h1>
               <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                Diseño y desarrollo web profesional para hacer crecer tu negocio en el mundo digital
+                DiseÃ±o y desarrollo web profesional para hacer crecer tu negocio en el mundo digital
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button asChild size="lg" className="bg-violet-600 hover:bg-violet-700 text-white rounded-full px-8">
@@ -185,7 +185,7 @@ export default function Home() {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="rounded-full px-8">
-                  <Link href="#contacto">Contáctanos</Link>
+                  <Link href="#contacto">ContÃ¡ctanos</Link>
                 </Button>
               </div>
             </div>
@@ -203,7 +203,7 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Mejorar la navegación por pestañas para hacerla más clara y visualmente separada */}
+            {/* Mejorar la navegaciÃ³n por pestaÃ±as para hacerla mÃ¡s clara y visualmente separada */}
             <Tabs defaultValue="landing-pages" className="max-w-5xl mx-auto">
               <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12 p-1 bg-gray-100 rounded-lg">
                 <TabsTrigger
@@ -223,42 +223,42 @@ export default function Home() {
               <TabsContent value="landing-pages">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   <PricingCard
-                    title="Básico"
+                    title="BÃ¡sico"
                     price="$35.000"
-                    description="Diseño simple, responsive, botón WhatsApp, redes sociales."
+                    description="DiseÃ±o simple, responsive, botÃ³n WhatsApp, redes sociales."
                     features={[
-                      "Diseño responsive",
-                      "Botón de WhatsApp",
-                      "Integración redes sociales",
+                      "DiseÃ±o responsive",
+                      "BotÃ³n de WhatsApp",
+                      "IntegraciÃ³n redes sociales",
                       "Formulario de contacto",
-                      "Optimizado para móviles",
+                      "Optimizado para mÃ³viles",
                     ]}
                   />
                   <PricingCard
                     title="Intermedio"
                     price="$60.000"
-                    description="Sitio multisección, diseño personalizado, SEO básico."
+                    description="Sitio multisecciÃ³n, diseÃ±o personalizado, SEO bÃ¡sico."
                     features={[
-                      "Diseño personalizado",
-                      "Múltiples secciones",
-                      "SEO básico",
-                      "Integración Google Analytics",
+                      "DiseÃ±o personalizado",
+                      "MÃºltiples secciones",
+                      "SEO bÃ¡sico",
+                      "IntegraciÃ³n Google Analytics",
                       "Formulario de contacto avanzado",
-                      "Optimización de imágenes",
+                      "OptimizaciÃ³n de imÃ¡genes",
                     ]}
                   />
                   <PricingCard
                     title="Avanzado"
                     price="$90.000"
-                    description="Animaciones, backend básico con Node.js, rendimiento optimizado."
+                    description="Animaciones, backend bÃ¡sico con Node.js, rendimiento optimizado."
                     features={[
-                      "Diseño premium personalizado",
+                      "DiseÃ±o premium personalizado",
                       "Animaciones y transiciones",
-                      "Backend básico con Node.js",
-                      "Optimización de rendimiento",
+                      "Backend bÃ¡sico con Node.js",
+                      "OptimizaciÃ³n de rendimiento",
                       "SEO avanzado",
-                      "Panel de administración",
-                      "Soporte técnico (1 mes)",
+                      "Panel de administraciÃ³n",
+                      "Soporte tÃ©cnico (1 mes)",
                     ]}
                   />
                 </div>
@@ -267,31 +267,31 @@ export default function Home() {
               <TabsContent value="tiendas-online">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                   <PricingCard
-                    title="Básico"
+                    title="BÃ¡sico"
                     price="$90.000"
-                    description="Hasta 10 productos, diseño responsive, pasarelas de pago locales."
+                    description="Hasta 10 productos, diseÃ±o responsive, pasarelas de pago locales."
                     features={[
                       "Hasta 10 productos",
-                      "Diseño responsive",
+                      "DiseÃ±o responsive",
                       "Pasarelas de pago locales",
-                      "Panel de administración",
-                      "Gestión de inventario básica",
-                      "SEO básico",
+                      "Panel de administraciÃ³n",
+                      "GestiÃ³n de inventario bÃ¡sica",
+                      "SEO bÃ¡sico",
                     ]}
                   />
                   <PricingCard
                     title="Avanzado"
                     price="$150.000"
-                    description="Hasta 30 productos, diseño personalizado, reviews, velocidad, integración redes sociales, SEO avanzado."
+                    description="Hasta 30 productos, diseÃ±o personalizado, reviews, velocidad, integraciÃ³n redes sociales, SEO avanzado."
                     features={[
                       "Hasta 30 productos",
-                      "Diseño totalmente personalizado",
+                      "DiseÃ±o totalmente personalizado",
                       "Sistema de reviews",
-                      "Optimización de velocidad",
-                      "Integración con redes sociales",
+                      "OptimizaciÃ³n de velocidad",
+                      "IntegraciÃ³n con redes sociales",
                       "SEO avanzado",
-                      "Múltiples pasarelas de pago",
-                      "Soporte técnico (3 meses)",
+                      "MÃºltiples pasarelas de pago",
+                      "Soporte tÃ©cnico (3 meses)",
                     ]}
                   />
                 </div>
@@ -316,15 +316,15 @@ export default function Home() {
                     TravelMate: App de Viajes con Calendario Inteligente
                   </h3>
                   <p className="text-gray-600 mb-6">
-                    Desarrollamos una aplicación móvil para viajeros que incluye un calendario inteligente y sistema de
-                    reservas para restaurantes, hoteles y actividades turísticas.
+                    Desarrollamos una aplicaciÃ³n mÃ³vil para viajeros que incluye un calendario inteligente y sistema de
+                    reservas para restaurantes, hoteles y actividades turÃ­sticas.
                   </p>
                   <ul className="space-y-3 mb-8">
                     <FeatureItem>Interfaz intuitiva y moderna</FeatureItem>
                     <FeatureItem>Sistema de reservas en tiempo real</FeatureItem>
                     <FeatureItem>Calendario inteligente con sugerencias</FeatureItem>
-                    <FeatureItem>Integración con mapas y navegación</FeatureItem>
-                    <FeatureItem>Modo offline para viajeros sin conexión</FeatureItem>
+                    <FeatureItem>IntegraciÃ³n con mapas y navegaciÃ³n</FeatureItem>
+                    <FeatureItem>Modo offline para viajeros sin conexiÃ³n</FeatureItem>
                   </ul>
                 </div>
                 <div className="order-1 md:order-2 flex justify-center">
@@ -353,33 +353,33 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Sobre Nosotros</h2>
               <div className="w-20 h-1 bg-violet-600 mx-auto mb-6"></div>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Somos un equipo pequeño pero ambicioso, enfocado en crear soluciones web eficientes y creativas
+                Somos un equipo pequeÃ±o pero ambicioso, enfocado en crear soluciones web eficientes y creativas
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
               <TeamMember
-                name="Thiago Piñeyro"
+                name="Thiago PiÃ±eyro"
                 role="Front-end Developer"
-                description="Desarrollador que transforma los diseños en sitios web funcionales. Especialista en tecnologías modernas como React, Node.js y bases de datos."
+                description="Desarrollador que transforma los diseÃ±os en sitios web funcionales. Especialista en tecnologÃ­as modernas como React, Node.js y bases de datos."
               />
               <TeamMember
                 name="Berenice Frontini"
                 role="UI/UX Designer"
-                description="Diseñadora UI/UX especializada en Figma. Crea el diseño visual y la estructura de las páginas, enfocándose en la experiencia del usuario y la estética."
+                description="DiseÃ±adora UI/UX especializada en Figma. Crea el diseÃ±o visual y la estructura de las pÃ¡ginas, enfocÃ¡ndose en la experiencia del usuario y la estÃ©tica."
               />
             </div>
 
             <div className="mt-16 bg-violet-50 p-8 rounded-2xl max-w-5xl mx-auto">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Nuestra Visión</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Nuestra VisiÃ³n</h3>
               <p className="text-gray-600 mb-6">
-                En UIZA, nos dedicamos a ofrecer soluciones web rápidas, responsivas y estéticamente refinadas para
-                empresas e individuos. Combinamos experiencia técnica con diseño creativo para construir sitios web que
-                no solo se vean geniales, sino que también funcionen excepcionalmente bien.
+                En UIZA, nos dedicamos a ofrecer soluciones web rÃ¡pidas, responsivas y estÃ©ticamente refinadas para
+                empresas e individuos. Combinamos experiencia tÃ©cnica con diseÃ±o creativo para construir sitios web que
+                no solo se vean geniales, sino que tambiÃ©n funcionen excepcionalmente bien.
               </p>
               <p className="text-gray-600">
-                Creemos en la simplicidad, la eficiencia y la innovación. Nuestro objetivo es ayudar a nuestros clientes
-                a establecer una presencia en línea sólida que impulse su crecimiento y éxito.
+                Creemos en la simplicidad, la eficiencia y la innovaciÃ³n. Nuestro objetivo es ayudar a nuestros clientes
+                a establecer una presencia en lÃ­nea sÃ³lida que impulse su crecimiento y Ã©xito.
               </p>
             </div>
           </div>
@@ -389,17 +389,17 @@ export default function Home() {
         <section id="contacto" className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contáctanos</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">ContÃ¡ctanos</h2>
               <div className="w-20 h-1 bg-violet-600 mx-auto mb-6"></div>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                ¿Listo para comenzar tu proyecto? Ponte en contacto con nosotros hoy mismo
+                Â¿Listo para comenzar tu proyecto? Ponte en contacto con nosotros hoy mismo
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
               <div>
                 <div className="bg-white p-8 rounded-xl shadow-sm">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Envíanos un mensaje</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">EnvÃ­anos un mensaje</h3>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="space-y-2">
                       <label htmlFor="nombre" className="block text-sm font-medium text-gray-700">
@@ -472,7 +472,7 @@ export default function Home() {
                         {formStatus.submitting
                           ? "Enviando..."
                           : formStatus.submitted
-                            ? "¡Enviado!"
+                            ? "Â¡Enviado!"
                             : "Enviar por Email"}
                         <Mail className="ml-2 h-4 w-4" />
                       </Button>
@@ -514,7 +514,7 @@ export default function Home() {
 
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Información de Contacto</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">InformaciÃ³n de Contacto</h3>
                   <div className="space-y-6">
                     <ContactInfo
                       icon={
@@ -547,22 +547,22 @@ export default function Home() {
                     />
                     <ContactInfo
                       icon={<MapPin className="h-6 w-6 text-violet-600" />}
-                      title="Ubicación"
+                      title="UbicaciÃ³n"
                       content="Buenos Aires, Argentina"
                     />
                   </div>
                 </div>
 
                 <div className="bg-violet-600 text-white p-8 rounded-xl">
-                  <h3 className="text-xl font-bold mb-4">¿Por qué elegirnos?</h3>
+                  <h3 className="text-xl font-bold mb-4">Â¿Por quÃ© elegirnos?</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <Check className="h-5 w-5 mr-2 text-violet-200" />
-                      <span>Diseño personalizado y único</span>
+                      <span>DiseÃ±o personalizado y Ãºnico</span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 mr-2 text-violet-200" />
-                      <span>Optimización para dispositivos móviles</span>
+                      <span>OptimizaciÃ³n para dispositivos mÃ³viles</span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 mr-2 text-violet-200" />
@@ -570,11 +570,11 @@ export default function Home() {
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 mr-2 text-violet-200" />
-                      <span>Soporte técnico continuo</span>
+                      <span>Soporte tÃ©cnico continuo</span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 mr-2 text-violet-200" />
-                      <span>Entrega rápida y eficiente</span>
+                      <span>Entrega rÃ¡pida y eficiente</span>
                     </li>
                   </ul>
                 </div>
@@ -597,7 +597,7 @@ export default function Home() {
                 className="h-10 w-auto brightness-0 invert mb-4"
               />
               <p className="text-gray-400 max-w-md">
-                Diseño y desarrollo web profesional para hacer crecer tu negocio en el mundo digital.
+                DiseÃ±o y desarrollo web profesional para hacer crecer tu negocio en el mundo digital.
               </p>
             </div>
             <div className="flex space-x-4">
@@ -616,10 +616,10 @@ export default function Home() {
             </p>
             <div className="mt-4 md:mt-0 flex space-x-6">
               <Link href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
-                Política de Privacidad
+                PolÃ­tica de Privacidad
               </Link>
               <Link href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
-                Términos de Servicio
+                TÃ©rminos de Servicio
               </Link>
             </div>
           </div>
@@ -652,7 +652,7 @@ export default function Home() {
   )
 }
 
-// Componente de enlace de navegación para desktop
+// Componente de enlace de navegaciÃ³n para desktop
 function NavLink({ href, isActive, children }) {
   return (
     <Link
@@ -666,7 +666,7 @@ function NavLink({ href, isActive, children }) {
   )
 }
 
-// Componente de enlace de navegación para móvil
+// Componente de enlace de navegaciÃ³n para mÃ³vil
 function MobileNavLink({ href, onClick, children }) {
   return (
     <Link href={href} className="text-gray-700 hover:text-violet-600 transition-colors text-lg" onClick={onClick}>
@@ -675,7 +675,7 @@ function MobileNavLink({ href, onClick, children }) {
   )
 }
 
-// 1. Modificar el componente PricingCard para que el botón "Contratar" redireccione a la sección de contacto
+// 1. Modificar el componente PricingCard para que el botÃ³n "Contratar" redireccione a la secciÃ³n de contacto
 function PricingCard({ title, price, description, features }) {
   return (
     <div className="rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-violet-100 group border border-gray-200 shadow-lg bg-white">
@@ -707,7 +707,7 @@ function PricingCard({ title, price, description, features }) {
   )
 }
 
-// Componente de elemento de característica
+// Componente de elemento de caracterÃ­stica
 function FeatureItem({ children }) {
   return (
     <li className="flex items-center">
@@ -739,7 +739,7 @@ function TeamMember({ name, role, description }) {
   )
 }
 
-// Reemplazar el icono de teléfono con el logo de WhatsApp y actualizar la sección de contacto
+// Reemplazar el icono de telÃ©fono con el logo de WhatsApp y actualizar la secciÃ³n de contacto
 function ContactInfo({ icon, title, content, href }) {
   return (
     <div className="flex items-start">
